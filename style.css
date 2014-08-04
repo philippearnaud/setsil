@@ -1,0 +1,16 @@
+body {
+background: #6C7A89;
+}
+
+h1 {
+text-align: center;
+}
+#add {
+background: red;
+display: inline;
+}
+
+#ul-liste li span {
+	background: grey;
+	float:right;
+}
