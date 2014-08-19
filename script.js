@@ -37,9 +37,28 @@ function add_list() {
 	}
 }
 
+function display_choice(random_choice) {
+ $('ul li:nth-child('+ random_choice + ')').addClass('red').text('WINNER');
+}
 
 function main() {
 	add_list();
+    display_choice(Math.floor(Math.random() * 10));
 }
 
+
+function random_choice() {
+    // Il faut qu'on récupère la taille du tableau de liste
+    var choice = Math.floor(Math.random() * taille_tableau);
+    return choice;
+}
+
+// On affiche un winner en rouge à la droite du prénom.
+
+
+
 window.onload = main;
+
+// Un tableau pour stocker les éléments de la liste.
+// On fait un rand sur l'un des éléments du tableau.
+// On affiche l'élément choisi.
