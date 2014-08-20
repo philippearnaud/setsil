@@ -3,6 +3,27 @@
 	//Déclaration et instantiation d'un tableau pour stocker les valeurs de nos listes.
 	var liste = [];
 
+function pick_a_winner() {
+
+
+	function hasard() {
+	    // Il faut qu'on récupère la taille du tableau de liste
+	   	 var choice = Math.floor(Math.random() * 10);
+	    console.log(choice);
+	    return choice;
+	    
+	};
+	
+	$('#button').click(function(){
+			$('ul li').removeClass('red');
+		$('ul li:nth-child('+ hasard() + ')').addClass('red').text('WINNER');
+	
+	});
+
+		
+
+};
+
 function add_list() { 
 	//Déclaration et instantiation d'une variable qui récupère l'élément du DOM sur lequel on va cliquer pour ajouter des éléments à la liste.
 	var add = document.getElementById('add');
@@ -37,21 +58,12 @@ function add_list() {
 	}
 }
 
-function display_choice(random_choice) {
- $('ul li:nth-child('+ random_choice + ')').addClass('red').text('WINNER');
-}
-
 function main() {
 	add_list();
-    display_choice(Math.floor(Math.random() * 10));
+	pick_a_winner();
 }
 
 
-function random_choice() {
-    // Il faut qu'on récupère la taille du tableau de liste
-    var choice = Math.floor(Math.random() * taille_tableau);
-    return choice;
-}
 
 // On affiche un winner en rouge à la droite du prénom.
 

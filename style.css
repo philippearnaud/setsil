@@ -19,3 +19,11 @@ display: inline;
     color: red;
     font-size: 24px;
 }
+
+.hasard_space {
+	width: 100%;
+}
+
+#button {
+background: red;
+}
