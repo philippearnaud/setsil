@@ -4,24 +4,17 @@
 	var liste = [];
 
 function pick_a_winner() {
-
-
 	function hasard() {
 	    // Il faut qu'on récupère la taille du tableau de liste
-	   	 var choice = Math.floor(Math.random() * 10);
+	   	 var choice = Math.floor(Math.random() * liste.length+1);
 	    console.log(choice);
 	    return choice;
-	    
 	};
 	
 	$('#button').click(function(){
 			$('ul li').removeClass('red');
 		$('ul li:nth-child('+ hasard() + ')').addClass('red').text('WINNER');
-	
 	});
-
-		
-
 };
 
 function add_list() { 
@@ -63,14 +56,4 @@ function main() {
 	pick_a_winner();
 }
 
-
-
-// On affiche un winner en rouge à la droite du prénom.
-
-
-
 window.onload = main;
-
-// Un tableau pour stocker les éléments de la liste.
-// On fait un rand sur l'un des éléments du tableau.
-// On affiche l'élément choisi.
