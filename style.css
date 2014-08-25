@@ -1,10 +1,30 @@
 body {
-background: #6C7A89;
+background: #fae219;
+margin: 0 auto;
 }
 
 h1 {
 text-align: center;
 }
+
+header {
+height: 200px;
+background-image: url('images/pingouin2.svg'), url('images/champagne_debouche.svg');
+background-repeat: no-repeat;
+background-position: -17px -60px, 950px -80px;
+background-size: 20%;
+}
+
+header img {
+    width: 10%;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    }
+
+    #green-first, #green-last {
+    background:  #51604d;
+    }
 #add {
 background: red;
 display: inline;
@@ -24,6 +44,6 @@ display: inline;
 	width: 100%;
 }
 
-#button {
+.button {
 background: red;
 }
