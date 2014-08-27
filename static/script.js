@@ -6,21 +6,22 @@ var liste = [];
 function pick_a_winner() {
     function hasard() {
         // Il faut qu'on récupère la taille du tableau de liste
-        var choice = Math.floor(Math.random() * liste.length);
+        var choice = Math.floor(Math.random() * liste.length + 1);
         console.log(choice);
         return choice;
     };
-        var compteur = false;
-        $('#button').click(ev){
+    $('#button').click(function(ev) {
+            var compteur = false;
+            console.log(compteur);
             if ( !compteur ) {
             $('ul li').removeClass('red');
-            $('ul li:nth-child('+ hasard() + ')').addClass('red').text('WINNER');
-                compteur = true;
-                } else {
-                    ev.preventDefault();
-                }
-                }
-             }
+            $('ul li:nth-child('+ hasard()  + ')').addClass('red').text('WINNER');
+            compteur = true;
+            } else {
+                 ev.preventDefault();
+            }
+    })
+}
 
             function add_list() { 
                 //Déclaration et instantiation d'une variable qui récupère l'élément du DOM sur lequel on va cliquer pour ajouter des éléments à la liste.
@@ -42,7 +43,7 @@ function pick_a_winner() {
                     };
                     var remove_content = document.createTextNode('remove');
                     //Déclaration et instantiation d'une variable newLi dans laquelle on va stocker l'élément li du DOM qu'on vient de créer.
-                    var newLi =i document.createElement('li');	
+                    var newLi = document.createElement('li');	
                     // Déclaration et instantiation d'une variable liste_content dans laquelle on va stocker un noeud de texte correspondant à la variable value. 
                     var liste_content = document.createTextNode(value);
                     //On utilise AppendChild sur la variable newLi pour rajouter le texte à notre variable li. => <li> Texte </li>

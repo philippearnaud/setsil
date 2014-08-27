@@ -3,12 +3,14 @@
   <head>
     <meta  charset='utf-8'/>
     <title>test</title>
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css" type="text/css" />
-    <link rel="stylesheet" href="style.css"  type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static',
+    filename='bootstrap/css/bootstrap.min.css')}}" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static',
+    filename='bootstrap/css/bootstrap-theme.min.css')}}" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}"  type="text/css" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
-   	<script src="script.js" type="text/javascript" charset="utf-8"></script>
+    <script src="{{ url_for('static', filename="bootstrap/js/bootstrap.min.js")}}"></script>
+    <script src="{{ url_for('static', filename='script.js')}}" ></script>
   </head>
   <body>
 		<header>
@@ -32,11 +34,9 @@
 				<ul id="ul-liste">
 				</ul>
 			</div>
-            <div class="jumbotron button">
+            <div id='button' class="jumbotron button">
              </div>
 		</div>
-
-        
 		</main>
 		<footer>
 		
