@@ -1,18 +1,18 @@
 body {
-background: #fae219;
-margin: 0 auto;
+    background: #f9bf3b;
+    margin: 0 auto;
 }
 
 h1 {
-text-align: center;
+    text-align: center;
 }
 
 header {
-height: 200px;
-background-image: url('images/pingouin2.svg'), url('images/champagne_debouche.svg');
-background-repeat: no-repeat;
-background-position: -17px -60px, 950px -80px;
-background-size: 20%;
+    height: 200px;
+    background-image: url('images/pingouin2.svg'), url('images/champagne_debouche.svg');
+    background-repeat: no-repeat;
+    background-position: -17px -60px, 950px -80px;
+    background-size: 20%;
 }
 
 header img {
@@ -20,19 +20,17 @@ header img {
     position: absolute;
     top: 20px;
     left: 20px;
-    }
+}
 
-    #green-first, #green-last {
-    background:  #51604d;
-    }
+#green-first, #green-last {
+}
 #add {
-background: red;
-display: inline;
+    background: red;
+    display: inline;
 }
 
 #ul-liste li span {
-	background: grey;
-	float:right;
+    float:right;
 }
 
 .red {
@@ -41,9 +39,18 @@ display: inline;
 }
 
 .hasard_space {
-	width: 100%;
+    width: 100%;
 }
 
 .button {
-background: red;
+    background: red;
+}
+
+.jumbotron {
+    background: #f9bf3b;
+}
+ 
+.remove:after {
+    content: '\f057';
+
 }
