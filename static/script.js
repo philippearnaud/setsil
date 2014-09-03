@@ -20,11 +20,11 @@ $(function() {
     function add_list() {
         var add = $('#add');
         var liste_appended = $('#ul-liste');
-        add.click(function() {
-            //TODO: Vérifier la variable jquery ci-dessous
+        add.click(function(ev) {
             var value = $('#liste').val();
-            $('#ul-liste').append("<li class='appended'>" + value +"</li>");
-            $('.appended').append('<span class="remove"> Remove </span>');
+            var li = $('<li/>', {class: 'appended'}).text(value);
+            li.append('<span class="remove"> Remove </span>');
+            $('#ul-liste').append(li);
             $('.remove').click(function(ev) {
                $(ev.target).parent().remove();
             });
