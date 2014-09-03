@@ -5,12 +5,13 @@ $(function() {
         console.log(choice);
         return choice;
     }
+    
     $('#button').click(function(ev) {
             var compteur = false;
             console.log(compteur);
             if ( !compteur ) {
             $('ul li').removeClass('red');
-            $('ul li:nth-child('+ hasard()  + ')').addClass('red').text('WINNER');
+            $('ul li:nth-child('+ pick_a_winner()  + ')').addClass('red').text('WINNER');
             compteur = true;
             } else {
                  ev.preventDefault();
@@ -22,6 +23,7 @@ $(function() {
         var liste_appended = $('#ul-liste');
         add.click(function(ev) {
             var value = $('#liste').val();
+            liste.push(value);
             var li = $('<li/>', {class: 'appended'}).text(value);
             li.append('<span class="remove"> Remove </span>');
             $('#ul-liste').append(li);
