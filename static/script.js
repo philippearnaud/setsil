@@ -6,8 +6,8 @@ $(function() {
         return choice;
     }
     
+var compteur = false;
     $('#button').click(function(ev) {
-            var compteur = false;
             console.log(compteur);
             if ( !compteur ) {
             $('ul li').removeClass('red');
